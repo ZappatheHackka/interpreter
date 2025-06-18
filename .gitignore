@@ -1,0 +1,24 @@
+# Binaries
+*.exe
+*.out
+*.test
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts
+bin/
+dist/
+
+# Go stuff
+go.sum
+*.mod.tmp
