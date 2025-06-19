@@ -17,7 +17,7 @@ type Statement interface {
 
 type Expression interface {
 	Node
-	expression()
+	expressionNode()
 }
 
 type ExpressionStatement struct {
@@ -32,7 +32,7 @@ func (es *ExpressionStatement) String() string {
 	return ""
 }
 
-func (es *ExpressionStatement) statementNode()
+func (es *ExpressionStatement) statementNode()	{}
 func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }
 
 type Program struct {
@@ -63,7 +63,7 @@ type LetStatement struct {
 	Value   Expression
 }
 
-func (ls *LetStatement_ String() string {
+func (ls *LetStatement) String() string {
 	var out bytes.Buffer
 	
 	out.WriteString(ls.TokenLiteral() + " ")
